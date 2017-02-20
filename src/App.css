@@ -1,0 +1,175 @@
+/** FONTS **/
+
+/* latin-ext */
+@font-face {
+  font-family: 'Viga';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Viga-Regular'), url(https://fonts.gstatic.com/s/viga/v5/p5lLB3R0ep4UMEX6HfITwBTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Viga';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Viga-Regular'), url(https://fonts.gstatic.com/s/viga/v5/e8vhT9JkMsYfiSacPJt-mfesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/** App **/
+.App {
+  text-align: center;
+  background: #000;
+}
+
+a {
+  color: #00ccff;
+}
+
+/** App Header **/
+.App-header {
+  padding: 16px;
+  color: white;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-family: 'Viga', sans-serif;
+}
+
+@media (min-width: 768px) {
+  .App-header {
+    width: 70%;
+  }
+}
+@media (min-width: 768px) {
+  .App-header h1 {
+    font-size: 6em;
+  }
+}
+
+.App-sub-header h2 {
+  font-size: 1em;
+}
+
+@media (min-width: 768px) {
+  .App-sub-header {
+    display: flex;
+  }
+
+  .App-sub-header h2 {
+    display: block;
+    flex: 1;
+    text-align: left;
+  }
+
+  .App-sub-header h2:nth-child(2) {
+    text-align: right;
+  }
+}
+
+/** SLIDERS **/
+.slider-col {
+  width: 100%;
+  text-align: center;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .sliders {
+    display: flex;
+    width: 70%;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  .slider-col {
+    flex: 1;
+    width: 33%;
+    padding: 0 16px;
+  }
+}
+
+.rangeslider {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .rangeslider {
+    width: 150px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.slider-col label {
+  font-size: 1.2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Viga', sans-serif;
+}
+
+@media (min-width: 768px) {
+  .slider-col label {
+    float: left;
+    text-align: right;
+    margin-top: -2px;
+    margin-left: 160px;
+  }
+}
+
+.slider-col p {
+  text-align: center;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .slider-col p {
+    text-align: left;
+  }
+}
+
+.slider {
+  margin-bottom: 3em;
+}
+
+.race-slider .rangeslider-horizontal .rangeslider__fill {
+  background-color: #ff0099;
+}
+
+.gender-slider .rangeslider-horizontal .rangeslider__fill {
+  background-color: #00ccff;
+}
+
+.sexuality-slider .rangeslider-horizontal .rangeslider__fill {
+  background-color: #9933ff;
+}
+
+.genderid-slider .rangeslider-horizontal .rangeslider__fill {
+  background-color: #ffff00;
+}
+
+.ableness-slider .rangeslider-horizontal .rangeslider__fill {
+  background-color: #ff9900;
+}
+
+.classface-slider .rangeslider-horizontal .rangeslider__fill {
+  background-color: #00cc66;
+}
+
+.slider a {
+  display: block;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 5px;
+  text-transform: uppercase;
+  width: 100px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: .8em;
+  font-family: 'Viga', sans-serif;
+  margin-top: 15px;
+}
