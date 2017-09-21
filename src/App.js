@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import * as THREE from 'three';
 import React3 from 'react-three-renderer';
 import Slider from 'react-rangeslider';
-import 'bootstrap/dist/css/bootstrap.css';
 import 'react-rangeslider/lib/index.css';
 import './App.css';
 import ableness from './ableness.png';
@@ -139,7 +138,7 @@ class CubeControls extends Component {
             value={this.props.value}
             onChange={this.props.onChangeMethod}
              />
-           <p>{this.props.text} <a href={this.props.linkURL}>Learn More</a></p>
+           <p>{this.props.text}</p>
          </div>
     );
   }
@@ -172,8 +171,8 @@ class App extends Component {
         <div className="App-header">
           <h1>The Privilege Cube</h1>
           <div className="App-sub-header">
-            <h2>Inspired by <a href="https://twitter.com/Transition">Kojo Idrissa's</a> <a href="https://www.alterconf.com/talks/using-privilege-arbitrage-increase-inclusion">AlterConf talk</a></h2>
-            <h2>A Project by <a href="https://twitter.com/allilevine">@allilevine</a></h2>
+            <h2>Inspired by <a href="https://twitter.com/Transition" target="_blank">Kojo Idrissa's</a> <a href="https://www.alterconf.com/talks/using-privilege-arbitrage-increase-inclusion" target="_blank">AlterConf talk</a></h2>
+            <h2>A Project by <a href="https://twitter.com/allilevine">@allilevine</a> / <a href="https://github.com/allilevine/privilege-cube" target="_blank">Fork</a></h2>
           </div>
         </div>
         <div className="App-content">
@@ -183,26 +182,29 @@ class App extends Component {
           <div className='sliders'>
             <div className="slider-col">
 
-              <CubeControls className={'race-slider slider'} label={'Race'} value={this.state.raceValue} onChangeMethod={this.handleChange.bind(this, 'raceValue')} text={'White people benefit from institutionalized racism and discrimination. If you\'re white, your racial privilege is 100%.'} linkURL={'http://everydayfeminism.com/2016/08/told-white-friend-black-opinion/'} />
+              <CubeControls className={'race-slider slider'} label={'Race'} value={this.state.raceValue} onChangeMethod={this.handleChange.bind(this, 'raceValue')} text={'White people benefit from institutionalized racism and discrimination. If you\'re white, your racial privilege is 100%.'} />
 
-              <CubeControls className={'sexuality-slider slider'} label={'Sexuality'} value={this.state.sexualityValue} onChangeMethod={this.handleChange.bind(this, 'sexualityValue')} text={'Heterosexual people benefit from institutionalized heteronormativity. If you\'re straight, your sexuality privilege is 100%.'} linkURL={'http://everydayfeminism.com/2015/03/examples-straight-privilege/'} />
-
-            </div>
-            <div className="slider-col">
-
-              <CubeControls className={'gender-slider slider'} label={'Gender'} value={this.state.genderValue} onChangeMethod={this.handleChange.bind(this, 'genderValue')} text={'Men benefit from institutionalized sexism. If you\'re male, your gender privilege is 100%.'} linkURL={'http://everydayfeminism.com/2016/02/160-examples-of-male-privilege/'} />
-
-              <CubeControls className={'genderid-slider slider'} label={'Gender ID'} value={this.state.genderidValue} onChangeMethod={this.handleChange.bind(this, 'genderidValue')} text={'Cisgender people (people who identify with the gender they were assigned at birth) benefit from institutionalized transphobia. If you\'re cis, your gender ID privilege is 100%.'} linkURL={'http://everydayfeminism.com/2016/02/130-examples-cis-privilege/'} />
+              <CubeControls className={'sexuality-slider slider'} label={'Sexuality'} value={this.state.sexualityValue} onChangeMethod={this.handleChange.bind(this, 'sexualityValue')} text={'Heterosexual people benefit from institutionalized heteronormativity. If you\'re straight, your sexuality privilege is 100%.'} />
 
             </div>
             <div className="slider-col">
 
-              <CubeControls className={'classface-slider slider'} label={'Class'} value={this.state.classfaceValue} onChangeMethod={this.handleChange.bind(this, 'classfaceValue')} text={'People who come from middle or higher class families and neighborhoods benefit from institutionalized classism. If you grew up with these advantages, your class privilege is 100%.'} linkURL={'http://everydayfeminism.com/2015/12/everyday-class-privilege/'} />
+              <CubeControls className={'gender-slider slider'} label={'Gender'} value={this.state.genderValue} onChangeMethod={this.handleChange.bind(this, 'genderValue')} text={'Men benefit from institutionalized sexism. If you\'re male, your gender privilege is 100%.'}  />
 
-              <CubeControls className={'ableness-slider slider'} label={'Able-ness'} value={this.state.ablenessValue} onChangeMethod={this.handleChange.bind(this, 'ablenessValue')} text={'Able-bodied people benefit from institutionalized ableism. If you\'re able-bodied, your able-ness privilege is 100%.'} linkURL={'https://en.wikipedia.org/wiki/Ableism'} />
+              <CubeControls className={'genderid-slider slider'} label={'Gender ID'} value={this.state.genderidValue} onChangeMethod={this.handleChange.bind(this, 'genderidValue')} text={'Cisgender people (people who identify with the gender they were assigned at birth) benefit from institutionalized transphobia. If you\'re cis, your gender ID privilege is 100%.'} />
+
+            </div>
+            <div className="slider-col">
+
+              <CubeControls className={'classface-slider slider'} label={'Class'} value={this.state.classfaceValue} onChangeMethod={this.handleChange.bind(this, 'classfaceValue')} text={'People who come from middle or higher class families and neighborhoods benefit from institutionalized classism. If you grew up with these advantages, your class privilege is 100%.'} />
+
+              <CubeControls className={'ableness-slider slider'} label={'Able-ness'} value={this.state.ablenessValue} onChangeMethod={this.handleChange.bind(this, 'ablenessValue')} text={'Able-bodied people benefit from institutionalized ableism. If you\'re able-bodied, your able-ness privilege is 100%.'} />
 
             </div>
         </div>
+
+          <a className="info-link"  href="http://everydayfeminism.com/2014/09/what-is-privilege/" target="_blank">What is privilege?</a>
+
       </div>
       </div>
     );
