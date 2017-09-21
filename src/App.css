@@ -18,18 +18,42 @@
 }
 
 /** App **/
+*, :after, :before {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
 .App {
   text-align: center;
   background: #000;
+  padding-bottom: 2em;
 }
 
 a {
   color: #00ccff;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+  }
+
 /** App Header **/
 .App-header {
-  padding: 16px;
+  padding: 16px 0;
   color: white;
   max-width: 1170px;
   width: 100%;
@@ -40,7 +64,7 @@ a {
 
 @media (min-width: 768px) {
   .App-header {
-    width: 70%;
+    width: 68%;
   }
 }
 @media (min-width: 768px) {
@@ -73,7 +97,7 @@ a {
 .slider-col {
   width: 100%;
   text-align: center;
-  padding: 0 16px;
+  padding: 0 0;
 }
 
 @media (min-width: 768px) {
@@ -86,7 +110,7 @@ a {
   .slider-col {
     flex: 1;
     width: 33%;
-    padding: 0 16px;
+    padding: 0 0;
   }
 }
 
@@ -159,17 +183,23 @@ a {
   background-color: #00cc66;
 }
 
-.slider a {
+a.info-link {
   display: block;
   color: #fff;
   border: 1px solid #fff;
   padding: 5px;
   text-transform: uppercase;
-  width: 100px;
+  width: 200px;
   text-align: center;
   border-radius: 5px;
   font-weight: bold;
-  font-size: .8em;
   font-family: 'Viga', sans-serif;
-  margin-top: 15px;
+  margin: 20px auto 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+a.info-link:hover {
+  color: #00ccff;
+  border: 1px solid #00ccff;
 }
